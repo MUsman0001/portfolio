@@ -1,0 +1,184 @@
+.experience-page {
+  padding-top: 3rem;
+}
+
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 190px 40px 1fr;
+  gap: 1.5rem;
+  position: relative;
+  padding-bottom: 3.5rem;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+/* Timeline Meta (Left) */
+.timeline-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-top: 0.35rem;
+}
+
+.timeline-period {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+}
+
+.timeline-badge {
+  font-size: 0.68rem;
+  padding: 0.15rem 0.5rem;
+}
+
+/* Timeline Axis (Center) */
+.timeline-axis {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.axis-node {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--bg-surface);
+  border: 2px solid var(--cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 0 12px var(--cyan-glow);
+}
+
+.node-inner {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--cyan);
+}
+
+.axis-line {
+  width: 2px;
+  flex-grow: 1;
+  background: linear-gradient(to bottom, var(--cyan), var(--border-subtle));
+  margin-top: 6px;
+}
+
+/* Content Card (Right) */
+.timeline-content-card {
+  padding: 2.25rem 2rem;
+  transition: border-color var(--transition-fast);
+}
+
+.timeline-content-card:hover {
+  border-color: var(--border-medium);
+}
+
+.card-header-row {
+  margin-bottom: 0.5rem;
+}
+
+.role-title {
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.company-info {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+}
+
+.company-name {
+  color: var(--cyan);
+  font-weight: 600;
+}
+
+.company-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--text-muted);
+}
+
+.company-loc {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.role-tagline {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-top: 0.6rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.achievements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-bottom: 1.75rem;
+}
+
+.achievement-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.achieve-check {
+  color: var(--emerald-bright);
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+.achievement-item p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.role-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+@media (max-width: 768px) {
+  .timeline-item {
+    grid-template-columns: 24px 1fr;
+    gap: 1rem;
+  }
+  .timeline-meta {
+    grid-column: 2;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 0.75rem;
+    margin-bottom: -0.5rem;
+  }
+  .timeline-axis {
+    grid-row: 1 / span 2;
+  }
+  .timeline-content-card {
+    grid-column: 2;
+    padding: 1.5rem;
+  }
+}
