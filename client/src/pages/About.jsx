@@ -48,13 +48,14 @@ const SKILL_DOMAINS = [
     icon: <IconServer size={18} />,
     desc: 'APIs, data stores, and systems programming.',
     skills: [
-      'Laravel',
+      'Laravel (PHP)',
       'FastAPI',
       'Redis',
       'MySQL',
       'SQLite',
       'C++',
-      'Socket programming'
+      'Socket programming',
+      'WebSocket'
     ]
   },
   {
@@ -65,9 +66,12 @@ const SKILL_DOMAINS = [
     skills: [
       'Git',
       'Kubernetes (Minikube)',
-      'Ansible (basic)',
-      'Flutter',
-      'AWS (freelance)'
+      'Ansible',
+      'Nginx',
+      'Flutter (Dart)',
+      'Liferay',
+      'AWS (EC2)',
+      'Google Cloud Platform (GCP)'
     ]
   }
 ]
