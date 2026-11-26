@@ -153,7 +153,7 @@ function Contact() {
               <span className="status-title">Status &amp; Location</span>
             </div>
             <p className="status-text">
-              Islamabad, Pakistan · Open to MS Cybersecurity programs
+              Islamabad, Pakistan · Open to graduate study
             </p>
             <div className="status-pill-list">
               <span className="badge badge-emerald">Cybersecurity</span>

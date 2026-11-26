@@ -50,10 +50,10 @@ const ROLES = [
     role: 'Freelance Full-Stack Developer',
     company: 'Fiverr',
     location: 'Remote',
-    tagline: 'Delivered web and mobile projects for international clients.',
+    tagline: 'Delivered website projects for international clients.',
     achievements: [
-      'Completed 7 orders for 2 international clients, deployed on AWS.',
-      'Fixed security issues in older code before handover.'
+      'Completed 7 orders for 2 international clients, working on their websites and deploying them on cPanel.',
+      'The work was mostly changing existing web applications and adding new features.'
     ],
     tags: ['Full-Stack', 'AWS', 'Web', 'Mobile']
   }

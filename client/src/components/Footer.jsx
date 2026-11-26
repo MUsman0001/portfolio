@@ -60,7 +60,7 @@ function Footer() {
           </p>
           <div className="footer-status-pill">
             <span className="footer-status-dot" />
-            <span>Open to MS Cybersecurity programs</span>
+            <span>Open to graduate study</span>
           </div>
         </div>
       </div>

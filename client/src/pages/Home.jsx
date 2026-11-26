@@ -62,7 +62,7 @@ function Home() {
           <div className="status-badge-wrap">
             <div className="badge badge-emerald">
               <span className="live-indicator" />
-              <span>Open to MS Cybersecurity programs</span>
+              <span>Open to graduate study</span>
             </div>
           </div>
 
@@ -165,8 +165,8 @@ function Home() {
             <span className="pillar-number">01 / SECURE ENGINEERING</span>
             <h3>Secure Engineering</h3>
             <p>
-              Role-based access, API security fixes, and a CI/CD pipeline that scans
-              code and container images before every deploy.
+              Role-based access, API security fixes, and a CI/CD pipeline that scans code and
+              container images, then deploys and rolls back automatically.
             </p>
             <div className="pillar-tags">
               <span className="badge">RBAC</span>
