@@ -6,6 +6,7 @@ import {
   IconCode,
   IconCheckCircle,
   IconArrowRight,
+  IconExternalLink,
   IconLayers,
   IconDownload
 } from '../components/Icons'
@@ -225,19 +226,21 @@ function About() {
             <p className="section-tag">Education</p>
             <h3>BS Computer Science</h3>
             <p className="credential-meta">Air University Islamabad · Graduated 2026</p>
-            <p className="credential-body">Relevant courses</p>
-            <ul className="course-list">
-              <li>Compiler Construction</li>
-              <li>Parallel and Distributed Programming</li>
-              <li>Digital Image Processing</li>
-              <li>Artificial Intelligence</li>
-            </ul>
           </div>
 
           <div className="credential-card glass-panel">
             <p className="section-tag">Certification</p>
             <h3>Google Cloud Cybersecurity Professional Certificate</h3>
             <p className="credential-meta">Google Cloud (Coursera)</p>
+            <a
+              href="https://www.coursera.org/account/accomplishments/professional-cert/BTMIIXUUF46X"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-secondary btn-sm"
+            >
+              <span>View Credential</span>
+              <IconExternalLink size={12} />
+            </a>
           </div>
         </div>
       </section>
