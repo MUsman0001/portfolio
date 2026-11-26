@@ -138,8 +138,15 @@
   gap: 0.45rem;
 }
 
-/* Direct Email CTA Column (Right) */
-.contact-direct-col {
+/* Right Column (Direct Email + Status) */
+.contact-right-col {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-direct-card {
   min-width: 0;
   padding: 2.25rem;
   display: flex;
@@ -147,7 +154,7 @@
   gap: 1.25rem;
 }
 
-.contact-direct-col .info-card-header h2 {
+.contact-direct-card .info-card-header h2 {
   font-size: 1.35rem;
   font-weight: 600;
   line-height: 1.2;
@@ -173,7 +180,7 @@
 
 @media (max-width: 600px) {
   .info-card,
-  .contact-direct-col {
+  .contact-direct-card {
     padding: 1.35rem;
   }
   .email-copy-box {

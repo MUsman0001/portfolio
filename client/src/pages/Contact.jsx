@@ -89,6 +89,49 @@ function Contact() {
               <IconDownload size={14} />
             </a>
           </div>
+        </div>
+
+        <div className="contact-right-col">
+          <div className="contact-direct-card glass-panel">
+            <div className="info-card-header">
+              <span className="info-icon badge-cyan">
+                <IconMail size={18} />
+              </span>
+              <div>
+                <h2>Direct Email</h2>
+                <p>Fastest way to reach me</p>
+              </div>
+            </div>
+
+            <p className="direct-desc">
+              Open your default email client to message me directly, or copy my
+              email address below.
+            </p>
+
+            <div className="email-copy-box">
+              <span className="email-text">{EMAIL}</span>
+              <button
+                type="button"
+                className="btn btn-secondary btn-sm copy-btn"
+                onClick={handleCopyEmail}
+                title="Copy to clipboard"
+              >
+                {copied ? (
+                  <>
+                    <IconCheck size={14} className="copied-check" />
+                    <span>Copied!</span>
+                  </>
+                ) : (
+                  <span>Copy</span>
+                )}
+              </button>
+            </div>
+
+            <a href={`mailto:${EMAIL}`} className="btn btn-primary email-cta-btn">
+              <IconMail size={16} />
+              <span>Email Me</span>
+            </a>
+          </div>
 
           <div className="info-card glass-panel availability-card">
             <div className="status-header">
@@ -104,47 +147,6 @@ function Contact() {
               <span className="badge badge-indigo">Applied AI</span>
             </div>
           </div>
-        </div>
-
-        <div className="contact-direct-col glass-panel">
-          <div className="info-card-header">
-            <span className="info-icon badge-cyan">
-              <IconMail size={18} />
-            </span>
-            <div>
-              <h2>Direct Email</h2>
-              <p>Fastest way to reach me</p>
-            </div>
-          </div>
-
-          <p className="direct-desc">
-            Open your default email client to message me directly, or copy my
-            email address below.
-          </p>
-
-          <div className="email-copy-box">
-            <span className="email-text">{EMAIL}</span>
-            <button
-              type="button"
-              className="btn btn-secondary btn-sm copy-btn"
-              onClick={handleCopyEmail}
-              title="Copy to clipboard"
-            >
-              {copied ? (
-                <>
-                  <IconCheck size={14} className="copied-check" />
-                  <span>Copied!</span>
-                </>
-              ) : (
-                <span>Copy</span>
-              )}
-            </button>
-          </div>
-
-          <a href={`mailto:${EMAIL}`} className="btn btn-primary email-cta-btn">
-            <IconMail size={16} />
-            <span>Email Me</span>
-          </a>
         </div>
       </div>
     </div>
