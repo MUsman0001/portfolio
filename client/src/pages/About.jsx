@@ -7,7 +7,6 @@ import {
   IconCheckCircle,
   IconArrowRight,
   IconExternalLink,
-  IconLayers,
   IconDownload
 } from '../components/Icons'
 import { CV_PATH } from '../data/site'
@@ -77,10 +76,7 @@ function About() {
   return (
     <div className="page about-page">
       <header className="section-header">
-        <span className="section-tag">
-          <IconLayers size={14} />
-          Profile
-        </span>
+        <span className="section-tag">About</span>
         <h1 className="section-title">About me</h1>
         <p className="section-desc">
           Computer Science graduate applying for a master’s in cybersecurity.
@@ -155,10 +151,7 @@ function About() {
 
       <section className="principles-section">
         <div className="section-header">
-          <span className="section-tag">
-            <IconCheckCircle size={14} />
-            Guiding Philosophy
-          </span>
+          <span className="section-tag">Approach</span>
           <h2 className="section-title">Principles</h2>
         </div>
 
@@ -191,10 +184,7 @@ function About() {
 
       <section className="skills-matrix-section">
         <div className="section-header">
-          <span className="section-tag">
-            <IconLayers size={14} />
-            Technical Matrix
-          </span>
+          <span className="section-tag">Tools &amp; Stack</span>
           <h2 className="section-title">Skills</h2>
         </div>
 

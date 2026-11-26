@@ -1,58 +1,31 @@
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import {
   IconShield,
   IconCpu,
   IconServer,
-  IconTerminal,
   IconArrowRight,
   IconCheckCircle,
   IconGithub,
-  IconActivity,
-  IconLayers,
+  IconExternalLink,
   IconDownload
 } from '../components/Icons'
 import { projects } from '../data/projects'
 import { EMAIL, GITHUB_URL, CV_PATH } from '../data/site'
 import './Home.css'
 
-const TERMINAL_COMMANDS = {
-  pipeline: {
-    label: 'pipeline --ci-cd',
-    output: [
-      '✓ SonarQube scan',
-      '✓ Docker build',
-      '✓ Trivy scan',
-      '✓ Manual approval',
-      '✓ Deploy',
-      '✓ Health check',
-      '➔ Rollback if the new build fails'
-    ]
+const PROFILE_ROWS = [
+  { label: 'Degree', value: 'BS Computer Science, Air University Islamabad (2026)' },
+  { label: 'Current role', value: 'DevOps Intern, Business Analytics (Pvt) Ltd' },
+  { label: 'FYP lead', value: 'AeroCrew Flow — crew operations system for PIA' },
+  {
+    label: 'Certification',
+    value: 'Google Cloud Cybersecurity Certificate',
+    href: 'https://www.coursera.org/account/accomplishments/professional-cert/BTMIIXUUF46X'
   },
-  projects: {
-    label: 'projects --list',
-    output: [
-      'AeroCrew Flow',
-      'LogMonitor Pro',
-      'Deepfake Video Detector',
-      'Plant Disease Recognition',
-      'Mini Compiler',
-      'Chess AI',
-      'Ludo with Q-learning'
-    ]
-  },
-  focus: {
-    label: 'focus --areas',
-    output: [
-      'Security engineering',
-      'Detection',
-      'Applied AI'
-    ]
-  }
-}
+  { label: 'Focus', value: 'Security engineering, CI/CD security, and applied AI' }
+]
 
 function Home() {
-  const [activeTab, setActiveTab] = useState('pipeline')
   const featuredProjects = projects.filter((p) => p.featured).slice(0, 3)
 
   return (
@@ -99,61 +72,54 @@ function Home() {
           </div>
         </div>
 
-        <div className="hero-telemetry glass-panel">
-          <div className="terminal-header">
-            <div className="terminal-dots">
-              <span className="dot dot-red" />
-              <span className="dot dot-yellow" />
-              <span className="dot dot-green" />
-            </div>
-            <div className="terminal-title">
-              <IconTerminal size={13} />
-              <span>system-telemetry.sh</span>
-            </div>
-            <span className="terminal-status">VERIFIED</span>
+        <aside className="hero-summary glass-panel" aria-label="Academic and engineering summary">
+          <div className="summary-header">
+            <span className="summary-kicker">At a glance</span>
+            <span className="summary-location">Islamabad, PK</span>
           </div>
 
-          <div className="terminal-tabs">
-            {Object.keys(TERMINAL_COMMANDS).map((cmdKey) => (
-              <button
-                key={cmdKey}
-                className={`tab-btn ${activeTab === cmdKey ? 'is-active' : ''}`}
-                onClick={() => setActiveTab(cmdKey)}
-              >
-                {TERMINAL_COMMANDS[cmdKey].label}
-              </button>
+          <dl className="summary-list">
+            {PROFILE_ROWS.map((row) => (
+              <div key={row.label} className="summary-row">
+                <dt>{row.label}</dt>
+                <dd>
+                  {row.href ? (
+                    <a
+                      href={row.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="summary-link"
+                    >
+                      <span>{row.value}</span>
+                      <IconExternalLink size={12} />
+                    </a>
+                  ) : (
+                    row.value
+                  )}
+                </dd>
+              </div>
             ))}
-          </div>
+          </dl>
 
-          <div className="terminal-body">
-            <div className="command-line">
-              <span className="prompt">usman@telemetry:~$</span>
-              <span className="command">{TERMINAL_COMMANDS[activeTab].label}</span>
-            </div>
-            <div className="terminal-output">
-              {TERMINAL_COMMANDS[activeTab].output.map((line, idx) => (
-                <p key={idx} className={`output-line ${line.startsWith('➔') ? 'highlight' : ''}`}>
-                  {line}
-                </p>
-              ))}
-            </div>
-            <div className="cursor-line">
-              <span className="prompt">usman@telemetry:~$</span>
-              <span className="cursor" />
-            </div>
+          <div className="summary-footer">
+            <Link to="/experience" className="summary-footer-link">
+              <span>Experience &amp; internships</span>
+              <IconArrowRight size={14} />
+            </Link>
+            <a href={CV_PATH} download className="summary-footer-link">
+              <IconDownload size={14} />
+              <span>CV (PDF)</span>
+            </a>
           </div>
-        </div>
+        </aside>
       </section>
 
       <section className="pillars-section">
         <div className="section-header">
-          <span className="section-tag">
-            <IconLayers size={14} />
-            Core Engineering Pillars
-          </span>
-          <h2 className="section-title">Engineered for Reliability &amp; Scale</h2>
+          <span className="section-tag">Areas of work</span>
+          <h2 className="section-title">What I focus on</h2>
           <p className="section-desc">
-            Bridging production software craftsmanship, defense-in-depth security, and machine intelligence.
+            Security engineering, log monitoring, and applied machine learning.
           </p>
         </div>
 
@@ -162,7 +128,6 @@ function Home() {
             <div className="pillar-icon-box">
               <IconShield size={22} />
             </div>
-            <span className="pillar-number">01 / SECURE ENGINEERING</span>
             <h3>Secure Engineering</h3>
             <p>
               Role-based access, API security fixes, and a CI/CD pipeline that scans code and
@@ -180,7 +145,6 @@ function Home() {
             <div className="pillar-icon-box">
               <IconServer size={22} />
             </div>
-            <span className="pillar-number">02 / DETECTION & MONITORING</span>
             <h3>Detection and Monitoring</h3>
             <p>
               A log pipeline that collects, stores, and raises alerts on unusual
@@ -198,7 +162,6 @@ function Home() {
             <div className="pillar-icon-box">
               <IconCpu size={22} />
             </div>
-            <span className="pillar-number">03 / APPLIED AI</span>
             <h3>Applied AI</h3>
             <p>
               Deep learning for video and image classification, and a reinforcement
@@ -217,13 +180,10 @@ function Home() {
       <section className="featured-section">
         <div className="section-header-split">
           <div className="section-header">
-            <span className="section-tag">
-              <IconActivity size={14} />
-              Featured Deployments
-            </span>
+            <span className="section-tag">Work</span>
             <h2 className="section-title">Selected Projects</h2>
             <p className="section-desc">
-              Airline systems, log monitoring, and a deepfake detector with reported metrics.
+              Airline operations, log monitoring, and a deepfake video detector with reported metrics.
             </p>
           </div>
           <Link to="/projects" className="btn btn-secondary">
@@ -237,7 +197,7 @@ function Home() {
             <div key={project.id} className="project-card glass-panel">
               <div className="project-card-header">
                 <span className="badge badge-cyan">{project.track}</span>
-                <span className="project-index">PROJ / {project.no}</span>
+                <span className="project-index">#{project.no}</span>
               </div>
 
               <h3 className="project-card-title">{project.title}</h3>
@@ -259,7 +219,7 @@ function Home() {
 
               <div className="project-card-footer">
                 <Link to={`/projects#${project.id}`} className="project-link">
-                  <span>View Details &amp; Architecture</span>
+                  <span>View details</span>
                   <IconArrowRight size={14} />
                 </Link>
               </div>

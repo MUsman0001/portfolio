@@ -34,7 +34,6 @@ function Navbar() {
       <div className="nav-container">
         <Link to="/" className="nav-brand">
           <div className="brand-badge">
-            <span className="brand-dot" />
             <span className="brand-code">MU</span>
           </div>
           <div className="brand-text">

@@ -5,8 +5,7 @@ import {
   IconLinkedin,
   IconDownload,
   IconCheck,
-  IconArrowRight,
-  IconSparkles
+  IconArrowRight
 } from '../components/Icons'
 import { EMAIL, GITHUB_URL, LINKEDIN_URL, CV_PATH } from '../data/site'
 import './Contact.css'
@@ -45,10 +44,7 @@ function Contact() {
   return (
     <div className="page contact-page">
       <header className="section-header">
-        <span className="section-tag">
-          <IconSparkles size={14} />
-          Direct Channel
-        </span>
+        <span className="section-tag">Contact</span>
         <h1 className="section-title">Get in touch</h1>
         <p className="section-desc">
           For master’s admissions, research groups, and work at the seam of

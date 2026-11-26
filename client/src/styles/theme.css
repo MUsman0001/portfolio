@@ -59,8 +59,9 @@ body {
   background-color: var(--bg-base);
   color: var(--text-primary);
   font-family: var(--font-sans);
-  font-size: 15px;
+  font-size: 0.9375rem;
   line-height: 1.6;
+  overflow-wrap: break-word;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -161,6 +162,19 @@ button {
   border-radius: var(--radius-md);
   transition: all var(--transition-fast);
   white-space: nowrap;
+  max-width: 100%;
+}
+
+@media (max-width: 480px) {
+  .page {
+    width: calc(100% - 1.5rem);
+    padding: 2.5rem 0 4rem;
+  }
+  .btn {
+    white-space: normal;
+    text-align: center;
+    overflow-wrap: anywhere;
+  }
 }
 
 .btn-primary {

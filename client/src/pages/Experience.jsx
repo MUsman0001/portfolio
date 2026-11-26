@@ -1,4 +1,4 @@
-import { IconBriefcase, IconCheckCircle } from '../components/Icons'
+import { IconCheckCircle } from '../components/Icons'
 import './Experience.css'
 
 const ROLES = [
@@ -63,10 +63,7 @@ function Experience() {
   return (
     <div className="page experience-page">
       <header className="section-header">
-        <span className="section-tag">
-          <IconBriefcase size={14} />
-          Career &amp; Engineering Track
-        </span>
+        <span className="section-tag">Work &amp; Internships</span>
         <h1 className="section-title">Experience</h1>
         <p className="section-desc">
           DevOps internships, a final-year airline system, and freelance delivery.

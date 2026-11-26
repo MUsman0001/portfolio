@@ -8,7 +8,6 @@ import {
   IconCheckCircle,
   IconExternalLink,
   IconGithub,
-  IconLayers,
   IconActivity,
   IconLock,
   IconArrowRight,
@@ -82,10 +81,7 @@ function Projects() {
   return (
     <div className="page projects-page">
       <header className="section-header">
-        <span className="section-tag">
-          <IconLayers size={14} />
-          Technical Portfolio
-        </span>
+        <span className="section-tag">Projects</span>
         <h1 className="section-title">Selected Projects</h1>
         <p className="section-desc">
           Airline systems, monitoring pipelines, and applied machine learning —
@@ -136,9 +132,6 @@ function Projects() {
                     <span>NDA</span>
                   </span>
                 )}
-                {project.featured && (
-                  <span className="badge badge-featured">Flagship</span>
-                )}
               </div>
               <span className="proj-id-badge">#{project.no}</span>
             </div>
@@ -173,31 +166,33 @@ function Projects() {
               ))}
             </div>
 
-            <div className="card-actions">
-              {project.isPrivate ? (
-                <div className="private-action-wrap">
-                  <span className="private-note">
-                    <IconLock size={13} />
-                    <span>Proprietary source under NDA</span>
-                  </span>
-                  <Link to="/contact" className="btn btn-secondary btn-sm">
-                    <span>Inquire Architecture</span>
-                    <IconArrowRight size={13} />
-                  </Link>
-                </div>
-              ) : project.githubUrl ? (
-                <a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-secondary btn-sm"
-                >
-                  <IconGithub size={14} />
-                  <span>View Source Repository</span>
-                  <IconExternalLink size={12} />
-                </a>
-              ) : null}
-            </div>
+            {(project.isPrivate || project.githubUrl) && (
+              <div className="card-actions">
+                {project.isPrivate ? (
+                  <div className="private-action-wrap">
+                    <span className="private-note">
+                      <IconLock size={13} />
+                      <span>Proprietary source under NDA</span>
+                    </span>
+                    <Link to="/contact" className="btn btn-secondary btn-sm">
+                      <span>Inquire Architecture</span>
+                      <IconArrowRight size={13} />
+                    </Link>
+                  </div>
+                ) : (
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-secondary btn-sm"
+                  >
+                    <IconGithub size={14} />
+                    <span>View Source Repository</span>
+                    <IconExternalLink size={12} />
+                  </a>
+                )}
+              </div>
+            )}
           </article>
         ))}
 

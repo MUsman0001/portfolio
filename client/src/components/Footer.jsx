@@ -10,7 +10,6 @@ function Footer() {
         <div className="footer-top">
           <div className="footer-brand">
             <div className="footer-brand-title">
-              <span className="live-indicator" />
               <span>Muhammad Usman</span>
             </div>
             <p className="footer-brand-desc">
@@ -56,12 +55,8 @@ function Footer() {
 
         <div className="footer-bottom">
           <p className="footer-copy">
-            © {new Date().getFullYear()} Muhammad Usman. Built with React & Vite. All rights reserved.
+            © {new Date().getFullYear()} Muhammad Usman
           </p>
-          <div className="footer-status-pill">
-            <span className="footer-status-dot" />
-            <span>Open to graduate study</span>
-          </div>
         </div>
       </div>
     </footer>
