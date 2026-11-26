@@ -98,15 +98,16 @@ function About() {
             </p>
             <p>
               My final-year project, AeroCrew Flow, was a crew management system
-              for PIA, built over three semesters. I led the team. Alongside it I
+              for Pakistan International Airlines (PIA), built over three semesters. I led the team. Alongside it I
               built a distributed log monitoring platform, a deepfake detector,
               and other projects in AI and systems.
             </p>
             <p>
               I’m currently a DevOps intern, building pipelines that scan code
               and container images before deployment. I also completed the Google
-              Cloud Cybersecurity Certificate. I’m applying for a master’s to go
-              deeper into security engineering and AI-based detection.
+              Cloud Cybersecurity Certificate. I’m applying for a master’s to study
+              how AI can be applied to security, designing systems that can detect
+              and defend against threats.
             </p>
           </div>
 
