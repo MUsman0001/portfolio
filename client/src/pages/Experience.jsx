@@ -13,8 +13,9 @@ const ROLES = [
     achievements: [
       'Built CI/CD pipelines on Jenkins (separate Ubuntu agent) and on a self-hosted GitLab runner (GitLab CI/CD).',
       'Both pipelines run SonarQube analysis (.NET), Docker build, Trivy image scan, emailed report, manual approval, and production deployment. Trivy reports are saved as artifacts.',
+      'Completed 3+ production deployments: first deployed manually on the company server to verify the setup, then integrated the process into the CI/CD pipeline with automated triggers and rollback.',
       'Used Nginx as a reverse proxy for deployment, routing traffic to the containerized applications.',
-      'Added automatic rollback: a health check after deploy returns to the previous Docker image if the new build fails. Image tags are kept as latest, old 1, and old 2, and they update automatically after each deploy.',
+      'Added automatic rollback: a health check after deploy returns to the previous Docker image if the new build fails. Three image backups are kept (latest, old 1, old 2), and they update automatically after each deploy.',
       'Used Git for version control (branching, merging, rollbacks) on self-hosted GitLab and GitHub, and set up SSH keys for Jenkins.',
       'Moved .NET apps to Docker on Linux and fixed a Windows-only file path and a missing CORS policy.',
       'Ran Liferay with Elasticsearch and PostgreSQL in Docker, then set up a 2-node Liferay cluster sharing one database, and tested that it worked across both nodes.',
