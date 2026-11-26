@@ -49,6 +49,7 @@ const SKILL_DOMAINS = [
     desc: 'APIs, data stores, and systems programming.',
     skills: [
       'Laravel (PHP)',
+      'Flutter (Dart)',
       'FastAPI',
       'Redis',
       'MySQL',
@@ -68,7 +69,6 @@ const SKILL_DOMAINS = [
       'Kubernetes (Minikube)',
       'Ansible',
       'Nginx',
-      'Flutter (Dart)',
       'Liferay',
       'AWS (EC2)',
       'Google Cloud Platform (GCP)'
