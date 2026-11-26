@@ -34,37 +34,6 @@ function Contact() {
         <div className="contact-info-col">
           <div className="info-card glass-panel">
             <div className="info-card-header">
-              <span className="info-icon badge-cyan">
-                <IconMail size={18} />
-              </span>
-              <div>
-                <h3>Direct Email</h3>
-                <p>Fastest way to reach me</p>
-              </div>
-            </div>
-
-            <div className="email-copy-box">
-              <span className="email-text">{EMAIL}</span>
-              <button
-                type="button"
-                className="btn btn-secondary btn-sm copy-btn"
-                onClick={handleCopyEmail}
-                title="Copy to clipboard"
-              >
-                {copied ? (
-                  <>
-                    <IconCheck size={14} className="copied-check" />
-                    <span>Copied!</span>
-                  </>
-                ) : (
-                  <span>Copy</span>
-                )}
-              </button>
-            </div>
-          </div>
-
-          <div className="info-card glass-panel">
-            <div className="info-card-header">
               <span className="info-icon badge-indigo">
                 <IconGithub size={18} />
               </span>
@@ -138,12 +107,38 @@ function Contact() {
         </div>
 
         <div className="contact-direct-col glass-panel">
-          <div className="direct-header">
-            <h2>Send an email</h2>
-            <p>
-              Open your default email client to message me directly, or copy my
-              address from the card on the left.
-            </p>
+          <div className="info-card-header">
+            <span className="info-icon badge-cyan">
+              <IconMail size={18} />
+            </span>
+            <div>
+              <h2>Direct Email</h2>
+              <p>Fastest way to reach me</p>
+            </div>
+          </div>
+
+          <p className="direct-desc">
+            Open your default email client to message me directly, or copy my
+            email address below.
+          </p>
+
+          <div className="email-copy-box">
+            <span className="email-text">{EMAIL}</span>
+            <button
+              type="button"
+              className="btn btn-secondary btn-sm copy-btn"
+              onClick={handleCopyEmail}
+              title="Copy to clipboard"
+            >
+              {copied ? (
+                <>
+                  <IconCheck size={14} className="copied-check" />
+                  <span>Copied!</span>
+                </>
+              ) : (
+                <span>Copy</span>
+              )}
+            </button>
           </div>
 
           <a href={`mailto:${EMAIL}`} className="btn btn-primary email-cta-btn">

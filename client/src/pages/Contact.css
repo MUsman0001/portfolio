@@ -141,18 +141,19 @@
 /* Direct Email CTA Column (Right) */
 .contact-direct-col {
   min-width: 0;
-  padding: 2.5rem 2.25rem;
+  padding: 2.25rem;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
-.direct-header h2 {
-  font-size: 1.65rem;
-  margin-bottom: 0.5rem;
+.contact-direct-col .info-card-header h2 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.2;
 }
 
-.direct-header p {
+.direct-desc {
   font-size: 0.92rem;
   color: var(--text-secondary);
   line-height: 1.6;
