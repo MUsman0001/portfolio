@@ -33,8 +33,11 @@ const ROLES = [
     location: 'Booking Office, Islamabad',
     tagline: 'Led the team that built AeroCrew Flow, a crew management system for an airline.',
     achievements: [
-      'Led a team building a crew management system with a Laravel web app and a Flutter mobile app, covering rosters, conflict-aware assignments, and role-based access control.',
+      'Led a team building AeroCrew Flow, a crew operations system for an airline, with a Laravel web app and a Flutter mobile app.',
+      'Planners could upload the flight schedule, build crew duties (pairings), assign qualified crew, and publish rosters. The system also handled same-day changes like sick calls, delays, and cancellations.',
+      'Crew used the mobile app to view their roster and calendar, request leave, update their profile, get notifications, and chat with colleagues.',
       'Added qualification and conflict checks to reduce scheduling errors, and validation for flight-schedule imports.',
+      'Built role-based access control, so each user only saw what their role allowed, along with session-based login and MFA.',
       'Secured the mobile API with authentication and fixed common OWASP issues such as broken access control and SQL injection.',
       'Built real-time text messaging over sockets, with an access check on every connection, and deployed on Ubuntu.'
     ],
